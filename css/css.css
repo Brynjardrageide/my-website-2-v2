@@ -1,0 +1,133 @@
+/*all*/
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p {
+    margin: 0.5em 0 0.5em 0;
+}
+
+/*header*/
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: large;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.allsides-8 {
+    background:
+        linear-gradient(currentColor 0 0) 0 100%,
+        linear-gradient(currentColor 0 0) 0 100%,
+        linear-gradient(currentColor 0 0) 100% 0,
+        linear-gradient(currentColor 0 0) 100% 0;
+    background-size: 20px 3px, 3px 20px;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.allsides-8:hover {
+    background-position: 100% 100%, 0 0, 0 0, 100% 100%;
+}
+
+/*main*/
+main {
+    display: block;
+    background-image: url();
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+
+
+aside,
+article {
+    padding: 2em;
+}
+
+aside {
+    text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+
+
+main>aside>img {
+    height: 195px;
+    width: 192px;
+}
+
+.desctop {
+    display: none;
+}
+
+/*man, on comuter*/
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    aside {
+        margin-left: 2%;
+        width: 25%;
+    }
+
+
+    .columns-desktop {
+        display: flex;
+    }
+
+    .desctop {
+        display: block;
+    }
+
+}
+
+
+/*bakrund*/
+body {
+    background-color: #333;
+}
+
+main {
+    background-color: white;
+}
+
+/*footer*/
+footer {
+    padding: 15px;
+}
