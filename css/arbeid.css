@@ -28,7 +28,7 @@ button {
     outline: none;
     overflow: hidden;
     padding: 9px 20px 8px;
-
+    margin-top: 15px;
     text-align: center;
     text-transform: none;
     user-select: none;

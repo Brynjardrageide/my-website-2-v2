@@ -1,40 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<!---erklerer va slaks dokument det er-->
+
+<!--språk-->
+<html lang="norsk">
+
+<!--hode til netsiden ting som man ikke se me som netleseren bruker-->
 <head>
+
+    <!-- informajon om netsiden som mulige charakterer og anen info for netleseren-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--titel for taben på netleseren-->
     <title>brynjar hjem</title>
+
+    <!--linker til css filer-->
     <link rel="stylesheet" href="/css/css.css">
     <link rel="stylesheet" href="/css/indexcss.css">
-    <script src="/js/jquery-3.6.1.js"></script>
+
+    <!--script fil link til å vise og ikke vise overlay nav knapp-->
+    <script src="https://kit.fontawesome.com/919481ed45.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+
+    <!--header alså hode til netsiden som vises. her er ikke relevant info men ting til å hjelpe bruker-->
     <header>
+
+        <!--nav er stede du puter navigasjonms linker-->
         <nav>
-            <div class="desctop">
-                <ul>
-                    <li><a class="allsides-8" class="#" href="/">Hjem</a></li>
-                    <li><a class="allsides-8" href="amalieskram.html">Skolen</a></li>
-                    <li><a class="allsides-8" href="im.html">Im linjen</a></li>
-                    <li><a class="allsides-8" href="arbeid.html">Arbeide mitt</a></li>
-                    <li style="float:right"><a class="allsides-8" href="#">Social</a></li>
-                </ul>
-            </div>
+
+            <!--liste--> <!--nav baren til pc-->
+            <ul class="desctop">
+
+                <!--liste inhold og punkter-->
+                <li><a class="allsides-8" class="#" href="/">hjem</a></li>
+                <li><a class="allsides-8" href="im.html">im linjen</a></li>
+                <li><a class="allsides-8" href="arbeid.html">arbeide mitt</a></li>
+                <li style="float:right"><a class="allsides-8" href="skolen.html">om skolen</a></li>
+            </ul>
+
+            <!--liste--> <!--nav baren til telefoner-->
+            <ul class="moble">
+                
+                <!--divisjon til å gi informasjon til vordan netsiden er-->
+                <div id="myNav" class="overlay">
+
+                    <!-- knapp til å luke overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  
+                    <!-- Overlay inhold -->
+                    <div class="overlay-content">
+                      <a href="index.html">hjem</a>
+                      <a href="im.html">im linjen</a>
+                      <a href="arbeid.html">arbeid</a>
+                      <a href="skolen.html">skolen</a>
+                    </div>
+                  
+                  </div>
+                  
+                  <!-- bruk element til å open/show  overlay navigation baren meny -->
+                  <span style="font-size:30px;cursor:pointer;color: white;float: right  ;" onclick="openNav()">&#9776; </span>
+                  
+            </ul>
+            
         </nav>
 
     </header>
+
+    <!--hoved program for nettsiden der info og budskap er-->
     <main>
+
+        <!--content vekke fra content det er plaseret i-->
         <aside><img src="/img/logo.png" alt="logo"></aside>
+
+        <!--selv-contained content.-->
         <article>
+
+                <!--bilde-->
             <img src="/img/Amalie_Skram_High_School_and_AdO_Arena_Swimming_Hall_in_Bergen,_Vestland,_Norway.jpg" alt="skolen" class="banner">
+                <!--header1-->
             <h1>Informasjon</h1>
-            <p class="subtitle">Mit navn er brynjar drageide og er desiner og coder for denne netsiden. På denne netsiden står det om skolen amalie skram
-            arbeide til meg brnjar bernes drageide
-                og skjenerel informasjon om im lijen på skolen alså it og medie.
-            </p>
+                <!--tekst med en classe-->
+            <p class="subtitle">Mit navn er brynjar drageide og er desiner og coder for denne netsiden. På denne netsiden står det om skolen amalie skram, arbeide til meg brnjar bernes drageide og skjenerel informasjon om im lijen på skolen alså it og medie.</p>
+                <!--breakpoint-->
             <br>
 
+                <!--link-->
             <a href="/skolen.html"><h2>skolen</h2></a>
             <p class="subtitle">Amalie skram er en skole mitt i bergen by, ved siden av ado. 
             Med noen av de støtste snit intakene i vestlands fylkeskommun. Har de fem linjer med to yrkesfaglig linjer og to
@@ -51,10 +104,14 @@
         </article>
         
     </main>
+
+    <!--footor beina til netsiden du ser den ikke ofte men den kan ha nytig info som ikke er relevant for hva netsiden vil-->
     <footer>
-        <p>© brynjar bernes drageide</p>
+        <p>© drageide </p>
+        <p><i class="fa-solid fa-compass"></i> Lungegårdskaien 40
+            <a href="tel:55095100"><i class="fa-solid fa-phone"></i> 55 09 51 00</a></p>
     </footer>
 
-   <script src="/js/js.js"></script> 
+   <script src="/js/moblenav.js"></script> 
 </body>
 </html>

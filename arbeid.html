@@ -4,23 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>arbeid</title>
     <link rel="stylesheet" href="css/arbeid.css">
     <link rel="stylesheet" href="css/css.css">
+    <script src="https://kit.fontawesome.com/919481ed45.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <header>
         <nav>
-            <div class="desctop">
-            <ul>
-                <li><a class="allsides-8" class="#" href="/">Hjem</a></li>
-                <li><a class="allsides-8" href="amalieskram.html">Skolen</a></li>
-                <li><a class="allsides-8" href="im.html">Im linjen</a></li>
-                <li><a class="allsides-8" href="arbeid.html">Arbeide mitt</a></li>
-                <li style="float:right"><a class="allsides-8" href="#">Social</a></li>
+            <ul class="desctop">
+                <li><a class="allsides-8" class="#" href="/">hjem</a></li>
+                <li><a class="allsides-8" href="im.html">im linjen</a></li>
+                <li><a class="allsides-8" href="arbeid.html">arbeide mitt</a></li>
+                <li style="float:right"><a class="allsides-8" href="skolen.html">om skolen</a></li>
             </ul>
-            </div>
+            <ul class="moble">
+                <div id="myNav" class="overlay">
+
+                    <!-- Button to close the overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  
+                    <!-- Overlay content -->
+                    <div class="overlay-content">
+                      <a href="index.html">hjem</a>
+                      <a href="im.html">im linjen</a>
+                      <a href="arbeid.html">arbeid</a>
+                      <a href="skolen.html">skolen</a>
+                    </div>
+                  
+                  </div>
+                  
+                  <!-- Use any element to open/show the overlay navigation menu -->
+                  <span style="font-size:30px;cursor:pointer;color: white;float: right  ;" onclick="openNav()">&#9776; </span>
+                  
+            </ul>
+            
         </nav>
 
     </header>
@@ -30,27 +49,29 @@
             <img class="fixed" src="/img/logo.png" alt="logo">
             <br>
             <br>
+            <!--div med knaper med tab-->
             <div class="tab">
+                <!--seter knaper med tabname som hjem-->
                 <button class="tablinks" onclick="openTab(event, 'Hjem')">Informasjon</button>
                 <button class="tablinks" onclick="openTab(event, 'pewdepie')">Photo historie</button>
                 <button class="tablinks" onclick="openTab(event, 'games')">Netsiden</button>
-              </div>
+            </div>
         </aside>
       
         <article>
-           
-              <div id="Hjem" class="tabcontent">
+            <!--div med classe tabcontent-->
+            <div id="Hjem" class="tabcontent">
                 <br>
                 <h1>Informasjon</h1>
-                <br>
-                <br>    
-                <p class="subtitle">Tilvenstre er det svarte knaper som viser forkjelige informasjon.</p>
-                <br>
-                <div class="subtitle">
-                <p>Photo historie er fire bilder som forteler en historie.</p>
-                <p>Imensnetsiden er informasjon om denne netsiden</p>
-                </div>
+                    <br>
+                    <br>    
+                    <p class="subtitle">Tilvenstre er det svarte knaper som viser forkjelige informasjon.</p>
+                    <br>
+                    <p class="subtitle">Photo historie er fire bilder som forteler en historie.</p>
+                    <br>
+                    <p class="subtitle">Imensnetsiden er informasjon om denne netsiden</p>
             </div>
+            <!--div med classe tabcontent-->
            <div id="pewdepie" class="tabcontent">
                 <br>
                 <h2>Photo historie</h2>
@@ -63,19 +84,26 @@
                     <img class="mySlides" src="/img/scene3.png" alt="hevn">
                     <img class="mySlides" src="/img/scene4.png" alt="ny hund og kos fra fyr">
            </div>
+           <!--div med classe tabcontent-->
            <div id="games" class="tabcontent">
                 <h2>Netsiden</h2>
                 <br>
-                <p>Denne netside er en subdomain av drageide.com</p>
+                <p class="subtitle">Denne netside er en subdomain av drageide.com</p>
+                <br>
+                <p class="subtitle">for mer info gå på githuben min <a href="https://github.com/">brynjardrageide</a>.</p>
            </div>
         </article>     
     </main>
 
     <footer>
-        <p>© brynjar bernes drageide</p>
+        <p>© drageide </p>
+        <p><i class="fa-solid fa-compass"></i> Lungegårdskaien 40
+        <a href="tel:55095100"><i class="fa-solid fa-phone"></i> 55 09 51 00</a></p>    
     </footer>
-
+    
+    <!--script filer hent-->
     <script src="js/js.js"></script>
+    <script src="/js/moblenav.js"></script> 
     <script>openTab(event, 'Hjem');</script>
 </body>
 </html>
