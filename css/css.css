@@ -228,10 +228,10 @@ h1 {
 }
 
 .subtitle {
-    background-color: whitesmoke;
+    background-color: #222;
     font-size: 1.5em;
     padding: 20px;
-}
+    color: #fff;}
 
 /*footer*/
 footer {
@@ -249,4 +249,9 @@ footer {
 
 footer a {
     color: white;
+}
+main{
+    background-image: url(/img/space.jpg);
+    background-size: 3000px;
+  
 }

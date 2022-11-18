@@ -5,9 +5,7 @@
     border-top: none;
 }
 
-.tabcontent>p {
-    color: black;
-}
+
 
 /*from https://getcssscan.com/css-buttons-examples*/
 button {
@@ -37,11 +35,7 @@ button {
     width: 50%;
 }
 
-.subtitle {
-    background-color: whitesmoke;
-    font-size: 1.5em;
-    padding: 20px;
-}
+
 
 h1,
 h2 {

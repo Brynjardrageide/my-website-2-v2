@@ -3,128 +3,171 @@
 
 <!--språk-->
 <html lang="en">
+  <!--hode til netsiden ting som man ikke se me som netleseren bruker-->
+  <head>
+    <!-- informajon om netsiden som mulige charakterer og anen info for netleseren-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--hode til netsiden ting som man ikke se me som netleseren bruker-->
-<head>
-
-        <!-- informajon om netsiden som mulige charakterer og anen info for netleseren-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!--titel for taben på netleseren-->
+    <!--titel for taben på netleseren-->
     <title>im brynjar</title>
-    
-        <!--linker til css filer-->
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/arbeid.css">
-    
-        <!--script fil link til å vise og ikke vise overlay nav knapp-->
-    <script src="https://kit.fontawesome.com/919481ed45.js" crossorigin="anonymous"></script>
-</head>
-<body>
 
+    <!--linker til css filer-->
+    <link rel="stylesheet" href="css/arbeid.css" />
+    <link rel="stylesheet" href="css/css.css" />
+    <!--script fil link til å vise og ikke vise overlay nav knapp-->
+    <script
+      src="https://kit.fontawesome.com/919481ed45.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!--header alså hode til netsiden som vises. her er ikke relevant info men ting til å hjelpe bruker-->
     <header>
-        <nav>
-            <ul class="desctop">
-                <li><a class="allsides-8" class="#" href="/">hjem</a></li>
-                <li><a class="allsides-8" href="im.html">im linjen</a></li>
-                <li><a class="allsides-8" href="arbeid.html">arbeide mitt</a></li>
-                <li style="float:right"><a class="allsides-8" href="skolen.html">om skolen</a></li>
-            </ul>
-            <ul class="moble">
-                <div id="myNav" class="overlay">
+      <nav>
+        <ul class="desctop">
+          <li><a class="allsides-8" class="#" href="/">hjem</a></li>
+          <li><a class="allsides-8" href="im.html">im linjen</a></li>
+          <li><a class="allsides-8" href="arbeid.html">arbeide mitt</a></li>
+          <li style="float: right">
+            <a class="allsides-8" href="skolen.html">om skolen</a>
+          </li>
+        </ul>
+        <ul class="moble">
+          <div id="myNav" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
 
-                    <!-- Button to close the overlay navigation -->
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  
-                    <!-- Overlay content -->
-                    <div class="overlay-content">
-                      <a href="index.html">hjem</a>
-                      <a href="im.html">im linjen</a>
-                      <a href="arbeid.html">arbeid</a>
-                      <a href="skolen.html">skolen</a>
-                    </div>
-                  
-                  </div>
-                  
-                  <!-- Use any element to open/show the overlay navigation menu -->
-                  <span style="font-size:30px;cursor:pointer;color: white;float: right  ;" onclick="openNav()">&#9776; </span>
-                  
-            </ul>
-            
-        </nav>
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <a href="index.html">hjem</a>
+              <a href="im.html">im linjen</a>
+              <a href="arbeid.html">arbeid</a>
+              <a href="skolen.html">skolen</a>
+            </div>
+          </div>
 
+          <!-- Use any element to open/show the overlay navigation menu -->
+          <span
+            style="font-size: 30px; cursor: pointer; color: white; float: right"
+            onclick="openNav()"
+            >&#9776;
+          </span>
+        </ul>
+      </nav>
     </header>
     <main>
-        <aside><img src="/img/logo.png" alt="logo">
-            <br>
-            <br>
-            <div class="tab">
-                <p class="subtitle">fag</p>
-            <button class="tablinks" onclick="openTab(event, 'Hjem')">Informasjon</button>
-            <button class="tablinks" onclick="openTab(event, 'pewdepie')">Realfag</button>
-            <button class="tablinks" onclick="openTab(event, 'games')">Programering</button>
-            <button class="tablinks" onclick="openTab(event, 'fag4')">Medie</button>
-            <button class="tablinks" onclick="openTab(event, 'fag5')">Teknologi</button>
-
-
+      <aside>
+        <img src="/img/logo.png" alt="logo" />
+        <br />
+        <br />
+        <div class="tab">
+          <p class="subtitle">fag</p>
+          <button class="tablinks" onclick="openTab(event, 'Hjem')">
+            Informasjon
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'pewdepie')">
+            Realfag
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'games')">
+            Programering
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'fag4')">
+            Medie
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'fag5')">
+            Teknologi
+          </button>
         </div>
-    </aside>
-    <article>
+      </aside>
+      <article>
         <div id="Hjem" class="tabcontent">
-            <h1>Informasjons teknologi og medie</h1>
-            <br>
-            <br>
-            <p class="subtitle">Her kan du se og lese om visse informasjon om it og medie linjen siene fag fra syne til en elev</p>
-            <br>
-            <p class="subtitle">Itileg til fakta</p>
+          <h1>Informasjons teknologi og medie</h1>
+          <br />
+          <br />
+          <p class="subtitle">
+            Her kan du se og lese om visse informasjon om it og medie linjen
+            siene fag fra syne til en elev
+          </p>
+          <br />
+          <p class="subtitle">Itileg til fakta</p>
         </div>
         <div id="pewdepie" class="tabcontent">
-            <h2>Realfag</h2>
-            <br>
-            <br>
-            <p class="subtitle"> Når det kommer til realfag har vi ikke så mye, ved grund av at vi har delt in engelsk og norsk in i to år. Så det kansje dobelt så mye engelsk men det føles ikke mye ut bare mye lekser</p>
-            <br>
-            <p class="subtitle"> I natur fag er det veldig lite fordi vi har 1 til 2 timmer i ukken itileg til at det er gøyt.</p>
-            <br>
-            <p class="subtitle"> Matte er lit det samme som ungomskollen men vanskliere.</p>
+          <h2>Realfag</h2>
+          <br />
+          <br />
+          <p class="subtitle">
+            Når det kommer til realfag har vi ikke så mye, ved grund av at vi
+            har delt in engelsk og norsk in i to år. Så det kansje dobelt så mye
+            engelsk men det føles ikke mye ut bare mye lekser
+          </p>
+          <br />
+          <p class="subtitle">
+            I natur fag er det veldig lite fordi vi har 1 til 2 timmer i ukken
+            itileg til at det er gøyt.
+          </p>
+          <br />
+          <p class="subtitle">
+            Matte er lit det samme som ungomskollen men vanskliere.
+          </p>
         </div>
         <div id="games" class="tabcontent">
-            <h2>Konseptutvikling og programering</h2>
-            <br>
-            <br>
-            <p class="subtitle"> Eg eksker dette faget, det mangler lekser lærere vet ikke altit og fører deg til å undersøke og fårstå ting alene. Dette fører til at du virkelig forstår det.</p>
-            <br>
-            <p class="subtitle"> I tileg er det ikke bare et svar til problem løsning.</p>
+          <h2>Konseptutvikling og programering</h2>
+          <br />
+          <br />
+          <p class="subtitle">
+            Eg eksker dette faget, det mangler lekser lærere vet ikke altit og
+            fører deg til å undersøke og fårstå ting alene. Dette fører til at
+            du virkelig forstår det.
+          </p>
+          <br />
+          <p class="subtitle">
+            I tileg er det ikke bare et svar til problem løsning.
+          </p>
         </div>
         <div id="fag4" class="tabcontent">
-            <h2>produksjon og historieforteling</h2>
-                <br>
-                <br>
-                <p class="subtitle"> ved dette faget bruker man pc og film utsyr som kamera og adobe pakken. Det er drøm komme san det er kjempe font å bruke kamera, men det å bare få adobe er det beste.</p>
-                <img src="img/IMG_3364.png" alt="guy holding camara">
+          <h2>produksjon og historieforteling</h2>
+          <br />
+          <br />
+          <p class="subtitle">
+            ved dette faget bruker man pc og film utsyr som kamera og adobe
+            pakken. Det er drøm komme san det er kjempe font å bruke kamera, men
+            det å bare få adobe er det beste.
+          </p>
+          <img src="img/IMG_3364.png" alt="guy holding camara" />
         </div>
         <div id="fag5" class="tabcontent">
-            <h2>teknologiforståelse</h2>
-                <img src="img/unnamed.png" alt="">
-                <br>
-                <br>
-                <p class="subtitle"> Teknologiforståelse er en mix av programering og medie i fras mitt perspektiv</p>
-                <br>
-                <p class="subtitle"> dette er fordi vi har om it relevante informsjon som er viktig å kune med programering og fordi vi bruker kamera og lærer om hvordan det fungerer.</p>
+          <h2>teknologiforståelse</h2>
+          <img src="img/unnamed.png" alt="" />
+          <br />
+          <br />
+          <p class="subtitle">
+            Teknologiforståelse er en mix av programering og medie i fras mitt
+            perspektiv
+          </p>
+          <br />
+          <p class="subtitle">
+            dette er fordi vi har om it relevante informsjon som er viktig å
+            kune med programering og fordi vi bruker kamera og lærer om hvordan
+            det fungerer.
+          </p>
         </div>
-    </article>
-        
+      </article>
     </main>
     <footer>
-        <p>© drageide </p>
-        <p><i class="fa-solid fa-compass"></i> Lungegårdskaien 40
-            <a href="tel:55095100"><i class="fa-solid fa-phone"></i> 55 09 51 00</a></p>    </footer>
+      <p>© drageide</p>
+      <p>
+        <i class="fa-solid fa-compass"></i> Lungegårdskaien 40
+        <a href="tel:55095100"><i class="fa-solid fa-phone"></i> 55 09 51 00</a>
+      </p>
+    </footer>
     <script src="js/js.js"></script>
-    <script>openTab(event, 'Hjem');</script>
-    <script src="/js/moblenav.js"></script> 
-
-</body>
+    <script>
+      openTab(event, "Hjem");
+    </script>
+    <script src="/js/moblenav.js"></script>
+  </body>
 </html>
