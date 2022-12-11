@@ -7,40 +7,14 @@
     <title>skolen</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/arbeid.css">
+
     <script src="https://kit.fontawesome.com/919481ed45.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <!--header alså hode til netsiden som vises. her er ikke relevant info men ting til å hjelpe bruker-->
     <header>
-        <nav>
-            <ul class="desctop">
-                <li><a class="allsides-8" class="#" href="/">hjem</a></li>
-                <li><a class="allsides-8" href="im.html">im linjen</a></li>
-                <li><a class="allsides-8" href="arbeid.html">arbeide mitt</a></li>
-                <li style="float:right"><a class="allsides-8" href="skolen.html">om skolen</a></li>
-            </ul>
-            <ul class="moble">
-                <div id="myNav" class="overlay">
-
-                    <!-- Button to close the overlay navigation -->
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  
-                    <!-- Overlay content -->
-                    <div class="overlay-content">
-                      <a href="index.html">hjem</a>
-                      <a href="im.html">im linjen</a>
-                      <a href="arbeid.html">arbeid</a>
-                      <a href="skolen.html">skolen</a>
-                    </div>
-                  
-                  </div>
-                  
-                  <!-- Use any element to open/show the overlay navigation menu -->
-                  <span style="font-size:30px;cursor:pointer;color: white;float: right  ;" onclick="openNav()">&#9776; </span>
-                  
-            </ul>
-            
-        </nav>
-
+        <div id="header-pre"></div>
     </header>
     <main>
         <aside>
@@ -106,6 +80,6 @@
     <script src="js/js.js"></script>
         <script>openTab(event, 'Hjem');</script>
         <script src="/js/moblenav.js"></script> 
-
+        <script>console.log("Header Loaded");$("#header-pre").load("/sections/header.html");</script>
 </body>
 </html>
