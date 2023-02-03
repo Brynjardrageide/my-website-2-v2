@@ -1,82 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>arbeid</title>
-    <link rel="stylesheet" href="css/arbeid.css">
-    <link rel="stylesheet" href="css/css.css">
-    <script src="https://kit.fontawesome.com/919481ed45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/arbeid.css" />
+    <link rel="stylesheet" href="css/css.css" />
+    <script
+      src="https://kit.fontawesome.com/919481ed45.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="header-pre"></div>
+      <div id="header-pre"></div>
     </header>
 
     <main>
-        <aside>
-            <img class="fixed" src="/img/logo.png" alt="logo">
-            <br>
-            <br>
-            <!--div med knaper med tab-->
-            <div class="tab">
-                <!--seter knaper med tabname som hjem-->
-                <button class="tablinks" onclick="openTab(event, 'Hjem')">Informasjon</button>
-                <button class="tablinks" onclick="openTab(event, 'pewdepie')">Photo historie</button>
-                <button class="tablinks" onclick="openTab(event, 'games')">Netsiden</button>
-            </div>
-        </aside>
-      
-        <article>
-            <!--div med classe tabcontent-->
-            <div id="Hjem" class="tabcontent">
-                <br>
-                <h1>Informasjon</h1>
-                    <br>
-                    <br>    
-                    <p class="subtitle">Tilvenstre er det svarte knaper som viser forkjelige informasjon.</p>
-                    <br>
-                    <p class="subtitle">Photo historie er fire bilder som forteler en historie.</p>
-                    <br>
-                    <p class="subtitle">Imensnetsiden er informasjon om denne netsiden</p>
-            </div>
-            <!--div med classe tabcontent-->
-           <div id="pewdepie" class="tabcontent">
-                <br>
-                <h2>Photo historie</h2>
-                <br>
-                <br>
-                <p class="subtitle">Som tidliere sakt er photo historie en historie ut i fta fire bilder, gjet historien</p>
-                <br>
-                    <img class="mySlides" src="/img/scene1.png" alt="fyr og hund">
-                    <img class="mySlides" src="/img/scene2.png" alt="hund kjørt over">
-                    <img class="mySlides" src="/img/scene3.png" alt="hevn">
-                    <img class="mySlides" src="/img/scene4.png" alt="ny hund og kos fra fyr">
-           </div>
-           <!--div med classe tabcontent-->
-           <div id="games" class="tabcontent">
-                <h2>Netsiden</h2>
-                <br>
-                <p class="subtitle">Denne netside er en subdomain av drageide.com</p>
-                <br>
-                <p class="subtitle">for mer info gå på githuben min <a href="https://github.com/">brynjardrageide</a>.</p>
-           </div>
-        </article>     
+      <aside>
+        <img class="fixed" src="/img/logo.png" alt="logo" />
+        <br />
+        <br />
+        <!--div med knaper med tab-->
+        <div class="tab">
+          <!--seter knaper med tabname som hjem-->
+          <button class="tablinks" onclick="openTab(event, 'Hjem')">
+            Informasjon
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'pewdepie')">
+            Photo historie
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'games')">
+            Netsiden
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'javascript')">
+            javascript
+          </button>
+        </div>
+      </aside>
+
+      <article>
+        <!--div med classe tabcontent-->
+        <div id="Hjem" class="tabcontent">
+          <br />
+          <h1>Informasjon</h1>
+          <br />
+          <br />
+          <p class="subtitle">
+            Tilvenstre er det svarte knaper som viser forkjelige informasjon.
+          </p>
+          <br />
+          <p class="subtitle">
+            Photo historie er fire bilder som forteler en historie.
+          </p>
+          <br />
+          <p class="subtitle">Imensnetsiden er informasjon om denne netsiden</p>
+        </div>
+        <!--div med classe tabcontent-->
+        <div id="pewdepie" class="tabcontent">
+          <br />
+          <h2>Photo historie</h2>
+          <br />
+          <br />
+          <p class="subtitle">
+            Som tidliere sakt er photo historie en historie ut i fta fire
+            bilder, gjet historien
+          </p>
+          <br />
+          <img class="mySlides" src="/img/scene1.png" alt="fyr og hund" />
+          <img class="mySlides" src="/img/scene2.png" alt="hund kjørt over" />
+          <img class="mySlides" src="/img/scene3.png" alt="hevn" />
+          <img
+            class="mySlides"
+            src="/img/scene4.png"
+            alt="ny hund og kos fra fyr"
+          />
+        </div>
+        <!--div med classe tabcontent-->
+        <div id="games" class="tabcontent">
+          <h2>Netsiden</h2>
+          <br />
+          <p class="subtitle">Denne netside er en subdomain av drageide.com</p>
+          <br />
+          <p class="subtitle">dette er den andre versjonen av netsiden min</p>
+          <p class="subtitle">
+            for mer info gå på githuben min
+            <a href="https://github.com/">brynjardrageide</a>.
+          </p>
+        </div>
+        <div id="javascript" class="tabcontent">
+          <h2>javascript oppgave</h2>
+          <br />
+          <p class="subtitle">som oppgave har eg tenkt til å lage hang man</p>
+        </div>
+      </article>
     </main>
 
     <footer>
-        <p>© drageide </p>
-        <p><i class="fa-solid fa-compass"></i> Lungegårdskaien 40
-        <a href="tel:55095100"><i class="fa-solid fa-phone"></i> 55 09 51 00</a></p>    
+      <p>© drageide</p>
+      <p>
+        <i class="fa-solid fa-compass"></i> Lungegårdskaien 40
+        <a href="tel:55095100"><i class="fa-solid fa-phone"></i> 55 09 51 00</a>
+      </p>
     </footer>
-    
+
     <!--script filer hent-->
     <script src="js/js.js"></script>
-    <script src="/js/moblenav.js"></script> 
-    <script>openTab(event, 'Hjem');</script>
-    <script>console.log("Header Loaded");$("#header-pre").load("/sections/header.html");</script>
-</body>
+    <script src="/js/moblenav.js"></script>
+    <script>
+      openTab(event, "Hjem");
+    </script>
+    <script>
+      console.log("Header Loaded");
+      $("#header-pre").load("/sections/header.html");
+    </script>
+  </body>
 </html>

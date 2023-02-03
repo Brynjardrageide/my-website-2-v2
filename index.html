@@ -24,7 +24,6 @@
     
 </head>
 <body>
-
     <!--header alså hode til netsiden som vises. her er ikke relevant info men ting til å hjelpe bruker-->
     <header>
         <div id="header-pre"></div>
@@ -44,7 +43,7 @@
                 <!--header1-->
             <h1>Informasjon</h1>
                 <!--tekst med en classe-->
-            <p class="subtitle">Mit navn er brynjar drageide og er desiner og coder for denne netsiden. På denne netsiden står det om skolen amalie skram, arbeide til meg brnjar bernes drageide og skjenerel informasjon om im lijen på skolen alså it og medie.</p>
+            <p class="subtitle">Mit navn er brynjar drageide <script>document.write(age)</script> og er desiner og koder for denne netsiden. På denne netsiden står det om skolen amalie skram, arbeide til meg brnjar bernes drageide og skjenerel informasjon om im lijen på skolen alså it og medie.</p>
                 <!--breakpoint-->
             <br>
 
@@ -74,6 +73,7 @@
     </footer>
 
    <script src="/js/moblenav.js"></script> 
+   <script src="/js/age.js"></script>
 
    <script>console.log("Header Loaded");$("#header-pre").load("/sections/header.html");</script>
 </body>
