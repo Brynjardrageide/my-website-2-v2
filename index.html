@@ -21,6 +21,7 @@
     <!--script fil link til å vise og ikke vise overlay nav knapp-->
     <script src="https://kit.fontawesome.com/919481ed45.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     
 </head>
 <body>
@@ -42,8 +43,11 @@
             <img src="/img/Amalie_Skram_High_School_and_AdO_Arena_Swimming_Hall_in_Bergen,_Vestland,_Norway.jpg" alt="skolen" class="banner">
                 <!--header1-->
             <h1>Informasjon</h1>
-                <!--tekst med en classe-->
-            <p class="subtitle">Mit navn er brynjar drageide <script>document.write(age)</script> og er desiner og koder for denne netsiden. På denne netsiden står det om skolen amalie skram, arbeide til meg brnjar bernes drageide og skjenerel informasjon om im lijen på skolen alså it og medie.</p>
+
+            <!--tekst med en classe-->
+            <p class="subtitle">Mit navn er brynjar drageide og er desiner og koder for denne netsiden. På denne netsiden står det om skolen amalie skram, arbeide til meg brnjar bernes drageide og skjenerel informasjon om im lijen på skolen alså it og medie.</p>            
+            <p class="subtitle" id="agejs">(Age calculation failed)</p>
+
                 <!--breakpoint-->
             <br>
 
@@ -70,8 +74,14 @@
         <div id="footer-pre"></div>
     </footer>
 
-   <script src="/js/moblenav.js"></script> 
-   <script src="/js/age.js"></script>
+
+    <!--scrippt-->
+    <!--script import-->
+   <script src="/js/design_eliments/moblenav.js"></script> 
+   <script src="/js/data/age.js"></script>
+
+
+   
 
    <script>console.log("Header Loaded");$("#header-pre").load("/sections/header.html");</script>
    <script>console.log("footer loaded");$("#footer-pre").load("/sections/footer.html")</script>
