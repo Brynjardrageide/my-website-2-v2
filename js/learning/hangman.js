@@ -1,4 +1,5 @@
-const word = "javascript";
+const OrdMange = ["javascript", "bilfamilie", "ole", "balar", "boobs"];
+let word = OrdMange[Math.floor(Math.random()*OrdMange.length)]
 let wordProgress = Array(word.length).fill("_");
 let incorrectGuesses = 0;
 

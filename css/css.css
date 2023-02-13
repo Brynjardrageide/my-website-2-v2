@@ -257,3 +257,8 @@ main{
     background-size: 3000px;
   
 }
+p1 {
+    size: 10px;
+    font-size: 1em;
+    padding: 3px;
+}

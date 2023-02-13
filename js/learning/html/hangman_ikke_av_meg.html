@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!---erklerer va slaks dokument det er-->
+
+<!--språk-->
+<html lang="norsk">
+  <!--hode til netsiden ting som man ikke se me som netleseren bruker-->
+  <head>
+    <!-- informajon om netsiden som mulige charakterer og anen info for netleseren-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--titel for taben på netleseren-->
+    <title>brynjar hjem</title>
+
+    <!--linker til css filer-->
+    <link rel="stylesheet" href="/css/css.css" />
+
+    <!--script fil link til å vise og ikke vise overlay nav knapp-->
+    <script
+      src="https://kit.fontawesome.com/919481ed45.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--header alså hode til netsiden som vises. her er ikke relevant info men ting til å hjelpe bruker-->
+    <header>
+      <div id="header-pre"></div>
+    </header>
+
+    <!--hoved program for nettsiden der info og budskap er-->
+    <main>
+      <div class="hangman"></div>
+    </main>
+
+    <!--footor beina til netsiden du ser den ikke ofte men den kan ha nytig info som ikke er relevant for hva netsiden vil-->
+    <footer>
+      <div id="footer-pre"></div>
+    </footer>
+
+    <!--scrippt-->
+    <!--script import-->
+    <script src="/js/design_eliments/moblenav.js"></script>
+    <script src="/js/learning/hangman.js"></script>
+
+    <script>
+      console.log("Header Loaded");
+      $("#header-pre").load("/sections/header.html");
+    </script>
+    <script>
+      console.log("footer loaded");
+      $("#footer-pre").load("/sections/footer.html");
+    </script>
+  </body>
+</html>

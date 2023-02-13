@@ -1,3 +1,6 @@
+//variabler
+let BrynjarAlder = 0
+
 // Function to calculate the amount of years since a given date
 // Author: Soni
 function yearsSince(date)
@@ -20,3 +23,5 @@ console.log("yearsSince(new Date(2006, 10, 18))");
 console.log(yearsSince(new Date(2006, 10, 18)));
 
 document.getElementById("agejs").innerHTML = yearsSince(new Date(2006, 10, 18))
+BrynjarAlder = yearsSince(new Date(2006, 10, 18))
+ 

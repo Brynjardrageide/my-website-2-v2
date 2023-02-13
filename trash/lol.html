@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hangman Game</title>
+  <style>
+    .word {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .guessed {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="word"></div>
+  <div id="incorrect"></div>
+  <div id="guessed"></div>
+  <form id="guessForm">
+    <input type="text" id="letter">
+    <input type="submit" value="Guess">
+  </form>
+
+  <script>
+    const word = "javascript";
+    const wordArray = word.split("");
+    const incorrectGuesses = [];
+    const correctGuesses = [];
+    let guessCount = 0;
+
+    const wordEl = document.getElementById("word");
+    const incorrectEl = document.getElementById("incorrect");
+    const guessForm = document.getElementById("guessForm");
+    const letterEl = document.getElementById("letter");
+    const guessedEl = document.getElementById("guessed");
+
+    wordArray.forEach(letter => {
+      const letterEl = document.createElement("span");
+      letterEl.classList.add("letter");
+      letterEl.textContent = "_";
+      wordEl.appendChild(letterEl);
+    });
+
+    guessForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const guess = letterEl.value.toLowerCase();
+
+      if (incorrectGuesses.includes(guess) || correctGuesses.includes(guess)) {
+        alert("You already guessed this letter. Try again.");
+        return;
+      }
+
+      if (wordArray.includes(guess)) {
+        correctGuesses.push(guess);
+
+        wordArray.forEach((letter, index) => {
+          if (letter === guess) {
+            const letterEl = document.querySelectorAll(".letter")[index];
+            letterEl.textContent = guess;
+          }
+        });
+      } else {
+        incorrectGuesses.push(guess);
+        guessCount++;
+        incorrectEl.textContent = `Incorrect guesses: ${incorrectGuesses.join(
+          ", "
+        )}. Guesses left: ${6 - guessCount}`;
+      }
+
+      letterEl.value = "";
+
+      const correct = document.querySelectorAll(".letter");
+      let correctCount = 0;
+      correct.forEach(letter => {
+        if (letter.textContent !== "_") {
+          correctCount++;
+        }
+      });
+
+      if (correctCount === wordArray.length) {
+        alert("You win!");
+        guessedEl.textContent = "You won the game!";
+      } else if (guessCount === 6) {
+        alert("You lost.");
+        guessedEl.textContent = "You lost the game.";
+      }
+    });
+  </script
