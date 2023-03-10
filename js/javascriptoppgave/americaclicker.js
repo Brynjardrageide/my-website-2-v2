@@ -30,15 +30,29 @@ if (localStorage.getItem("Colinasier") === null) {
     var Colinasier = Number(localStorage.Colinasier);
     document.getElementById("Colinasier").innerHTML = Colinasier; 
 }
+if(localStorage.getItem("cityes") === null){
+    //Data item doesn't exist
+    console.log("No data found for colinisersprice!");
+    var cityes = 0;
+} else {
+    //Data item exists
+    console.log("Data found for cityes!");
+    var cityes = Number(localStorage.cityes);
+    document.getElementById("cityes").innerHTML = cityes; 
+}
+if (localStorage.getItem("citycost") === null) {
+    //Data item doesn't exist
+    console.log("No data found for colinisersprice!");
+    var citycost = 100;
+} else {
+    //Data item exists
+    console.log("Data found for citycost!");
+    var citycost = Number(localStorage.citycost);
+    document.getElementById("citycost").innerHTML = citycost; 
+}
+
 //click additional
 let adion = 1;
-
-//upgrades
-    //colinasiers
-    //cityes
-let cityes = 0;
-let citycost = 100;
-
 
 
 //time speeds
@@ -85,6 +99,10 @@ function buyColinasier(){
         Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
         localStorage.setItem('Colinasier', Colinasier.toString());
         Colinasier = Number(localStorage.getItem('Colinasier'));
+        localStorage.setItem('cityes', cityes.toString());
+        cityes = Number(localStorage.getItem('cityes'));
+        localStorage.setItem('citycost', citycost.toString());
+        citycost = Number(localStorage.getItem('citycost'));
     } 
 }
 function buycity(){
@@ -134,3 +152,22 @@ setInterval(function(){
     localStorage.setItem('Colinasier', Colinasier.toString());
     Colinasier = Number(localStorage.getItem('Colinasier'));
 }, citytime);
+function reset(){
+    score = 0;
+    Colinasier = 0;
+    Colinasiercost = 10;
+
+    localStorage.setItem('score', score.toString());
+    score = Number(localStorage.getItem('score'));
+    localStorage.setItem('Colinasiercost', Colinasiercost.toString());
+    Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
+    localStorage.setItem('Colinasier', Colinasier.toString());
+    Colinasier = Number(localStorage.getItem('Colinasier'));
+
+    document.getElementById("score").innerHTML = score;        
+    document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
+    document.getElementById("Colinasier").innerHTML = Colinasier;
+    document.getElementById("score").innerHTML = score;        
+    document.getElementById("citycost").innerHTML = citycost;      
+    document.getElementById("cityes").innerHTML = cityes;
+}
