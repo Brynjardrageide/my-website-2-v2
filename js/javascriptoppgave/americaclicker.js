@@ -1,36 +1,36 @@
 //score
-if (localStorage.getItem('score') === null){
+if (localStorage.getItem('score') === null){ //Basically sjekker om vi ikke har land i america
     //Data item doesn't exist
-    console.log("No data found for cookies!");
-    var score = 0;
+    console.log("No data found for cookies!"); //informerer at det ikke er blit brukkt
+    var score = 0; //score for cookie starter
 
-}else{
+}else{ // vis vi har har score
     //Data item exists
-    console.log("Data found for cookies!");
-    var score = Number(localStorage.score);
-    document.getElementById("score").innerHTML = score;  
+    console.log("Data found for cookies!"); //informerer at det er blit brukkt
+    var score = Number(localStorage.score); // henter scoren og endrer den fra string til  nummer
+    document.getElementById("score").innerHTML = score; // inputer det på netsiden 
 }
-if(localStorage.getItem("Colinasiercost") === null){
+if(localStorage.getItem("Colinasiercost") === null){ //sjekker om det ercolinisercost
     //Data item doesn't exist
-    console.log("No data found for colinisersprice!");
-    var Colinasiercost = 10;
-} else {
+    console.log("No data found for colinisersprice!"); //informerer om ble funner
+    var Colinasiercost = 10; // seter pris til 10 første gang
+} else { // hvis det er data
     //Data item exists
-    console.log("Data found for Colinasiercost!");
-    var Colinasiercost = Number(localStorage.Colinasiercost);
-    document.getElementById("Colinasiercost").innerHTML = Colinasiercost; 
+    console.log("Data found for Colinasiercost!"); //informerer om ble funner
+    var Colinasiercost = Number(localStorage.Colinasiercost); // henter data og gjør det til et nummer 
+    document.getElementById("Colinasiercost").innerHTML = Colinasiercost; // puter pris på netsiden på en spesefik id
 }
-if (localStorage.getItem("Colinasier") === null) {
+if (localStorage.getItem("Colinasier") === null) { // igjen
     //Data item doesn't exist
-    console.log("No data found for colinisersprice!");
-    var Colinasier = 10;
-} else {
+    console.log("No data found for colinisersprice!");// igjen
+    var Colinasier = 10;// igjen
+} else { // igjen
     //Data item exists
-    console.log("Data found for Colinasier!");
-    var Colinasier = Number(localStorage.Colinasier);
-    document.getElementById("Colinasier").innerHTML = Colinasier; 
+    console.log("Data found for Colinasier!"); // igjen
+    var Colinasier = Number(localStorage.Colinasier); // igjen
+    document.getElementById("Colinasier").innerHTML = Colinasier; // igjen
 }
-if(localStorage.getItem("cityes") === null){
+if(localStorage.getItem("cityes") === null){ 
     //Data item doesn't exist
     console.log("No data found for colinisersprice!");
     var cityes = 0;
@@ -51,10 +51,9 @@ if (localStorage.getItem("citycost") === null) {
     document.getElementById("citycost").innerHTML = citycost; 
 }
 
+    // variabler som ikke er i storage
 //click additional
 let adion = 1;
-
-
 //time speeds
 let Colinasiertime = 1000
 let citytime = 1000
@@ -62,9 +61,11 @@ let citytime = 1000
 //knapp
 const mainButon = document.getElementById("cockie");
 
+// ster alt på plass før vi gjør noe annet på netsiden
 //scores
-document.getElementById("score").innerHTML = score;        
-document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
+document.getElementById("score").innerHTML = score;  // igjen
+    //colinaisers      
+document.getElementById("Colinasiercost").innerHTML = Colinasiercost;   // igjen     
 document.getElementById("Colinasier").innerHTML = Colinasier;
     //city
 document.getElementById("score").innerHTML = score;        
@@ -73,80 +74,73 @@ document.getElementById("cityes").innerHTML = cityes;
 
 
 //leger til mer land eller mere score
-function update(amount) {
-    score = score + amount;
-    document.getElementById("score").innerHTML = score;
-    localStorage.setItem('score', score.toString());
-    score = Number(localStorage.getItem('score'));
-    storing();
+function update(amount) {   //seter en variabel som skall vøere hvor mye score du skall lege til til        dette kan vi senere bruke til å bruke påupgrades men det gjør eg ikke 
+    score = score + amount; // oppdaterer en score
+    storing(); // paser på alt av lagring og inner HTML
 }
 
+//funkjon til lagring og inner HTML
 function storing(){
+    
+
+    // update scores på netsiden
+    document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
+    document.getElementById("Colinasier").innerHTML = Colinasier;
+    document.getElementById("score").innerHTML = score;        
+    document.getElementById("citycost").innerHTML = citycost;      
+    document.getElementById("cityes").innerHTML = cityes;
+
+    // local storage saving functions
+        //score direckte
     localStorage.setItem('score', score.toString());
     score = Number(localStorage.getItem('score'));
-    localStorage.setItem('Colinasiercost', Colinasiercost.toString());
-    Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
-    localStorage.setItem('Colinasier', Colinasier.toString());
-    Colinasier = Number(localStorage.getItem('Colinasier'));
-    localStorage.setItem('cityes', cityes.toString());
-    cityes = Number(localStorage.getItem('cityes'));
-    localStorage.setItem('citycost', citycost.toString());
-    citycost = Number(localStorage.getItem('citycost'));
+        //colinesier uppgrade
+    localStorage.setItem('Colinasiercost', Colinasiercost.toString()); //pris
+    Colinasiercost = Number(localStorage.getItem('Colinasiercost')); //pris
+    localStorage.setItem('Colinasier', Colinasier.toString());  //antal
+    Colinasier = Number(localStorage.getItem('Colinasier')); //antal
+        // byer upgrade
+    localStorage.setItem('cityes', cityes.toString()); // antal
+    cityes = Number(localStorage.getItem('cityes'));//antal
+    localStorage.setItem('citycost', citycost.toString()); //pris
+    citycost = Number(localStorage.getItem('citycost'));//priss
 }
 
 //uppgrader funskjoner
 //kjøpe oppgradering for the collnaiser
-function buyColinasier(){
-    if (score >=Colinasiercost){
-        score = score - Colinasiercost
-        Colinasiercost = Colinasiercost + 1;
-        Colinasier++
-
-        document.getElementById("score").innerHTML = score;        
-        document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
-        document.getElementById("Colinasier").innerHTML = Colinasier;
+function buyColinasier(){ 
+    if (score >=Colinasiercost){ // passer på at du ikke kan kjøpe når du ikke har for lite
+        score = score - Colinasiercost // fjerner penger
+        Colinasiercost = Colinasiercost + 5; // øker pris
+        Colinasier++ //økker antal
         storing()
     } 
 }
-function buycity(){
+function buycity(){ //same here annen upgrade
     if (score >=citycost){
         score = score - citycost
         citycost = citycost + 10;
         cityes++
-
-        document.getElementById("score").innerHTML = score;        
-        document.getElementById("citycost").innerHTML = citycost;      
-        document.getElementById("cityes").innerHTML = cityes;
         storing()
     } 
 }
-
-
-
 //auto cliclers
 //for colinicer
-setInterval(function(){
-    score = score + Colinasier;
-    document.getElementById("score").innerHTML = score;   
-    storing()
-}, Colinasiertime);
+setInterval(function(){ //fette skjer hele tiden
+    score = score + Colinasier; // leger til score når vi har colinicer eller ingen ting
+    storing() // opptater alt
+}, Colinasiertime); //bestemer hvor kjapt
 //for city
-setInterval(function(){
+setInterval(function(){ //same as above
     score = score + cityes*10;
-    document.getElementById("score").innerHTML = score;      
     storing()
 }, citytime);
-function reset(){
+function reset(){ //reset function til det variables var når du started
     score = 0;
     Colinasier = 0;
     Colinasiercost = 10;
     citycost = 100;
     cityes = 0;
     storing()
-    document.getElementById("score").innerHTML = score;        
-    document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
-    document.getElementById("Colinasier").innerHTML = Colinasier;
-    document.getElementById("score").innerHTML = score;        
-    document.getElementById("citycost").innerHTML = citycost;      
-    document.getElementById("cityes").innerHTML = cityes;
+
 }
