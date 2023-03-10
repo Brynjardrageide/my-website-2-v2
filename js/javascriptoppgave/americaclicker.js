@@ -78,8 +78,21 @@ function update(amount) {
     document.getElementById("score").innerHTML = score;
     localStorage.setItem('score', score.toString());
     score = Number(localStorage.getItem('score'));
+    storing();
 }
 
+function storing(){
+    localStorage.setItem('score', score.toString());
+    score = Number(localStorage.getItem('score'));
+    localStorage.setItem('Colinasiercost', Colinasiercost.toString());
+    Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
+    localStorage.setItem('Colinasier', Colinasier.toString());
+    Colinasier = Number(localStorage.getItem('Colinasier'));
+    localStorage.setItem('cityes', cityes.toString());
+    cityes = Number(localStorage.getItem('cityes'));
+    localStorage.setItem('citycost', citycost.toString());
+    citycost = Number(localStorage.getItem('citycost'));
+}
 
 //uppgrader funskjoner
 //kjøpe oppgradering for the collnaiser
@@ -92,17 +105,7 @@ function buyColinasier(){
         document.getElementById("score").innerHTML = score;        
         document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
         document.getElementById("Colinasier").innerHTML = Colinasier;
-
-        localStorage.setItem('score', score.toString());
-        score = Number(localStorage.getItem('score'));
-        localStorage.setItem('Colinasiercost', Colinasiercost.toString());
-        Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
-        localStorage.setItem('Colinasier', Colinasier.toString());
-        Colinasier = Number(localStorage.getItem('Colinasier'));
-        localStorage.setItem('cityes', cityes.toString());
-        cityes = Number(localStorage.getItem('cityes'));
-        localStorage.setItem('citycost', citycost.toString());
-        citycost = Number(localStorage.getItem('citycost'));
+        storing()
     } 
 }
 function buycity(){
@@ -114,14 +117,7 @@ function buycity(){
         document.getElementById("score").innerHTML = score;        
         document.getElementById("citycost").innerHTML = citycost;      
         document.getElementById("cityes").innerHTML = cityes;
-
-        
-        localStorage.setItem('score', score.toString());
-        score = Number(localStorage.getItem('score'));
-        localStorage.setItem('Colinasiercost', Colinasiercost.toString());
-        Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
-        localStorage.setItem('Colinasier', Colinasier.toString());
-        Colinasier = Number(localStorage.getItem('Colinasier'));
+        storing()
     } 
 }
 
@@ -132,38 +128,21 @@ function buycity(){
 setInterval(function(){
     score = score + Colinasier;
     document.getElementById("score").innerHTML = score;   
-
-    localStorage.setItem('score', score.toString());
-    score = Number(localStorage.getItem('score'));
-    localStorage.setItem('Colinasiercost', Colinasiercost.toString());
-    Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
-    localStorage.setItem('Colinasier', Colinasier.toString());
-    Colinasier = Number(localStorage.getItem('Colinasier')); 
+    storing()
 }, Colinasiertime);
 //for city
 setInterval(function(){
     score = score + cityes*10;
     document.getElementById("score").innerHTML = score;      
-
-    localStorage.setItem('score', score.toString());
-    score = Number(localStorage.getItem('score'));
-    localStorage.setItem('Colinasiercost', Colinasiercost.toString());
-    Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
-    localStorage.setItem('Colinasier', Colinasier.toString());
-    Colinasier = Number(localStorage.getItem('Colinasier'));
+    storing()
 }, citytime);
 function reset(){
     score = 0;
     Colinasier = 0;
     Colinasiercost = 10;
-
-    localStorage.setItem('score', score.toString());
-    score = Number(localStorage.getItem('score'));
-    localStorage.setItem('Colinasiercost', Colinasiercost.toString());
-    Colinasiercost = Number(localStorage.getItem('Colinasiercost'));
-    localStorage.setItem('Colinasier', Colinasier.toString());
-    Colinasier = Number(localStorage.getItem('Colinasier'));
-
+    citycost = 100;
+    cityes = 0;
+    storing()
     document.getElementById("score").innerHTML = score;        
     document.getElementById("Colinasiercost").innerHTML = Colinasiercost;        
     document.getElementById("Colinasier").innerHTML = Colinasier;
