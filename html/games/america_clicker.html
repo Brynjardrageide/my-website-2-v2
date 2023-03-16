@@ -5,29 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>america clicker</title>
+    <link rel="stylesheet" href="/css/americaclicker.css" />
   </head>
   <body>
-    <article>
-      <p>land in america <span id="score">0</span></p>
-      <img
-        id="cockie"
-        src="/img/america_clicker/Dbake__WAAACIFK.jpg"
-        alt="america"
-        onclick="update(adion)"
-      />
-    </article>
-    <aside>
-      <!--uppgrades-->
-      <button onclick="buyColinasier()">
-        buy colinasier <span id="Colinasiercost"></span> --
-        <span id="Colinasier"> </span>
-      </button>
-      <button onclick="buycity()">
-        buy cityes <span id="citycost"></span> --
-        <span id="cityes"> </span>
-      </button>
-      <button onclick="reset()"></button>
-    </aside>
+    <div class="grid-container">
+      <div class="item1"><p>america clicker gether land</p></div>
+      <div class="item2">
+        <p>land in america <span id="score">0</span></p>
+        <img
+          id="cockie"
+          src="/img/america_clicker/Dbake__WAAACIFK.jpg"
+          alt="america"
+          onclick="update(adion)"
+        />
+      </div>
+
+      <div class="item3">
+        <button onclick="reset()">reset</button>
+      </div>
+
+      <div class="item4">
+        <!--uppgrades-->
+
+        <button onclick="buyColinasier()">
+          buy colinasier <span id="Colinasiercost"></span> --
+          <span id="Colinasier"> </span>
+        </button>
+        <br />
+        <button onclick="buycity()">
+          buy cityes <span id="citycost"></span> --
+          <span id="cityes"> </span>
+        </button>
+      </div>
+    </div>
 
     <!--scripts-->
 

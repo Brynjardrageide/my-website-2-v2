@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    ;
+  gap: 20px;
+  background-image: url(/img/america_clicker/weathered-wooden-surface.jpg);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: black;
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+}
+p { 
+    width: fit-content;
+    color: #fff;
+    border-style: ridge;
+    background-color: blueviolet;  
+     margin-left: auto;
+     margin-right: auto;
+}
+img {
+    size: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
